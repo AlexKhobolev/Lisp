@@ -7,7 +7,7 @@
 (defun scal-prod (v1 v2)
   (+ (* (car v1) (car v2)) (* (cadr v1) (cadr v2))))
   
-(scal-prod '(1 2) '(3 4)); 11
+(print (scal-prod '(1 2) '(3 4))); 11
 
 
 В многомерном прострастве:
@@ -15,4 +15,4 @@
 (defun scal-prod (v1 v2)
   (apply '+ (mapcar '* v1 v2)))
   
-(scal-prod '(1 1 1) '(2 2 2)); 6
+(print (scal-prod '(1 1 1) '(2 2 2))); 6
