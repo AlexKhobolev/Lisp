@@ -16,3 +16,13 @@
            )))
 
 (print (onion-n 1))
+
+
+
+(defun onion-n (n)
+  (cond
+        ((null n) nil)
+        (t (if (/= n 0) (- n 1)) )
+           ))
+
+(print (onion-n 1))
