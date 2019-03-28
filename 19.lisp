@@ -5,7 +5,7 @@
 (defun onion-n (n)
   (cond
         ((null n) nil)
-        (t (list (if (eq n 0) n (onion-n (1- n)))) )
+        (t (list (if (eq n 1) n (onion-n (1- n)))) )
            ))
 
 (print (onion-n 3)); ((((0))))
