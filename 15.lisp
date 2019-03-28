@@ -9,6 +9,6 @@
          (t (+ (* (car v1) (car v2)) (* (cadr v1) (cadr v2))))
     )
 )
-(print(scal-prod '(1 2) '(3 4)))
+(print(scal-prod '(1 2) '(3 4))); 11
 
 
