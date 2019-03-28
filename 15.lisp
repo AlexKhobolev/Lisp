@@ -3,12 +3,13 @@
 ;заданных списками целых чисел.
 
 
-Плоскость:
-
 (defun scal-prod (v1 v2)
-  (+ (* (car v1) (car v2)) (* (cadr v1) (cadr v2))))
-  
-(print (scal-prod '(1 2) '(3 4))); 11
+   (if (or (null v1)(null v2)) 0   
+   (+ (* (car v1) (car v2)) ( scal-prod(cdr v1) (cdr v2)))
+   )
+)
+
+(print(scal-prod '(4 7) '(2 9))); 71
 
 
 
