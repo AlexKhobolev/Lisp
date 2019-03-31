@@ -1,12 +1,9 @@
-;Задача 19
-;Определите функцию (ЛУКОВИЦА n), строящую N-уровневый вложенный список, 
-;элементом которого на самом глубоком уровне является N.
-
-(defun onion-n (n)
+(defun onion-n (n &optional (m n))
   (cond
-        ((null n) nil)
-        (t (list (if (eq n 1) n (onion-n (1- n)))) )
+        ((eq n 0) 0)
+        (t (list (if (eq n 1) (ret m) (onion-n (1- n)))) )
            ))
-
-(print (onion-n 3)); ((((0))))
-
+(defun ret (n) 
+        (n)
+    )
+(print (onion-n 4))
