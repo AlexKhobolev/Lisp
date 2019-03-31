@@ -4,11 +4,10 @@
 
 (defun scal-prod (v1 v2)
     (cond
-         ((null v1) nil)
-         ((null v2) nil)
-         (t (+ (* (car v1) (car v2)) (* (cadr v1) (cadr v2))))
+         ((null v1) 0)
+         ((null v2) 0)
+         (t (+ (* (car v1) (car v2)) (scal-prod (cdr v1) (cdr v2)))))
     )
-)
-(print(scal-prod '(1 2) '(3 4))); 11
 
+(print(scal-prod '(1 1 1 1) '(2 2 2 2))); 8
 
