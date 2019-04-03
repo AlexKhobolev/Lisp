@@ -1,9 +1,21 @@
 ;Определите функцию МНОЖЕСТВО, преобразующую список в множество.
 
-(defun make-set (lst)
-  (cond ((null lst) nil)
-        (t (cons (car lst)(make-set (remove lst))))))
-;(defun remm (lst)
- ;  (if (eq (car lst) (cadr lst)) (caddr lst)))
+(defun is-member (el arr)
+    (cond
+        ((null arr) NIL)
+        ((= (car arr) el) T)
+        (t (is-member el (cdr arr)))
+    )
+)
 
-(print (make-set '(1 2)))
+(defun create-set (arr)
+    ((lambda (first rest)
+        (cond
+            ((null arr) NIL)
+            ((is-member first (create-set rest)) (create-set rest))
+            (t (cons first (create-set rest)))
+        )
+    ) (car arr) (cdr arr))
+)
+
+(print (create-set '(1 2 3 3)))
