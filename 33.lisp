@@ -18,4 +18,4 @@
     ) (car arr) (cdr arr))
 )
 
-(print (create-set '(1 2 3 3)))
+(print (create-set '(1 2 3 3))); (1 2 3)
