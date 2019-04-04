@@ -2,9 +2,11 @@
 ;элементом которого на самом глубоком уровне является N.
 
 (defun onion (n &optional (m 1) (l '(1))) 
-    (if (= n m)l           
-        (cons (onion n (+ 1 m) (cons n ())) () 
-         )
+    (cond
+        ((eq n 0) 0)
+        ((eq n m) l)          
+        (t (cons (onion n (+ 1 m) (cons n ())) () 
+         ))
      )
 )
 
