@@ -3,7 +3,7 @@
 ;элементов не входящих в оба множества.
 
 (defun sim-dif (w v)
-  (list (mapcan 'list (unique w v) (unique v w))))
+  (append (unique w v) (unique v w)))
 
 (defun is-member (el arr)
     (cond
