@@ -18,4 +18,4 @@
         ((is-member (car w) v) (unique (cdr w) v))
         ((cons (car w) (unique (cdr w) v)))))
  
-(print (sim-dif '(1 2 3 4 6) '(2 3 4 5 7))); ((1 5 6 7))
+(print (sim-dif '(1 2 3 4 6) '(2 3 4 5 7))); (1 6 5 7)
