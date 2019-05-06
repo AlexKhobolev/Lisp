@@ -1,3 +1,5 @@
+;1. Определите FUNCALL через функционал APPLY.
+
 (defun funcalll (fn lst)
           (apply fn lst)
 )
