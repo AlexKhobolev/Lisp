@@ -13,3 +13,5 @@
   arr)
 )
 
+
+(print (main #'evenp '(0 1 2 3 4))) ;(1 3) 
