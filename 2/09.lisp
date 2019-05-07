@@ -1,6 +1,6 @@
 ; 9. Напишите генератор порождения чисел Фибоначчи: 0, 1, 1, 2, 3, 5, ...
 
-(defun fib ()
+(defun fib-gen ()
 	(let
 		((x 0) (y 1) (temp 0))
 		(lambda () (and
@@ -12,8 +12,8 @@
 	)
 )
 
-(setq g1 (fib))
-(setq g2 (fib))
+(setq g1 (fib-gen))
+(setq g2 (fib-gen))
 
 (print (funcall g1));1
 (print (funcall g2));1
