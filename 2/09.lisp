@@ -12,5 +12,5 @@
 	)
 )
 
-(setq gen1 (fib))
-(setq gen2 (fib))
+(setq g1 (fib))
+(setq g2 (fib))
